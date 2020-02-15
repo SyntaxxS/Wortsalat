@@ -1,6 +1,9 @@
-from itertools import permutations 
+from itertools import permutations
+
 
 s = input()
 permuts = permutations(s)
-for perm in list(permuts):
-         print (''.join(perm))
+f = open("output.txt", "w")
+for i in list(permuts):
+    print (''.join(i), file=f)
+f.close()
